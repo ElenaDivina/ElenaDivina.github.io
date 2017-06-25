@@ -226,7 +226,14 @@
 <!-- ====================================Все работы========================================= -->
   <div class="tab-pane active" id="all">
   <ul class="thumbnails">
-  
+
+    <li class="col-md-4 col-xs-6">
+      <div class="thumbnail">
+        <div class="blockDtl man_opt">
+       <a data-fancybox="gallery" rel="group" href="img/portfolio/image1_b.jpg"><img src="img/portfolio/image2_b.jpg" alt=""></a>
+        </div>
+      </div>
+    </li>
     <li class="col-md-4 col-xs-6">
       <div class="thumbnail">
         <div class="blockDtl all_opt">
@@ -276,7 +283,13 @@
   <div class="tab-pane" id="manicure">
   <ul class="thumbnails">
   
-    
+    <li class="col-md-4 col-xs-6">
+      <div class="thumbnail">
+        <div class="blockDtl man_opt">
+       <a data-fancybox="gallery" rel="group" href="img/portfolio/image1_b.jpg"><img src="img/portfolio/image2_b.jpg" alt=""></a>
+        </div>
+      </div>
+    </li>
     <li class="col-md-4 col-xs-6">
       <div class="thumbnail">
         <div class="blockDtl man_opt">
@@ -366,6 +379,12 @@
         $("#show_all").on('click', function() {
         
         $.fancybox.open([
+           {
+            src  : 'img/portfolio/image1_b.jpg',
+            opts : {
+              caption : 'Работа 2 (Маникюр, 17.06.2017)'
+            }
+          },
           {
             src  : 'img/portfolio/image2_b.jpg',
             opts : {
@@ -518,6 +537,28 @@
           <ul class="cd-author-info">
             <li><a href="https://vk.com/id134393991"><h4>Елизавета Палиенко</h4></a></li>
             <li> </li>
+          </ul>
+        </div>
+      </li>
+
+      <li>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae laboriosam perspiciatis voluptates, exercitationem nemo, adipisci odio nisi error ut, vel minus minima fuga consectetur doloribus provident repellendus suscipit sequi rerum!</p>
+        <div class="cd-author">
+          <img src="img/avatar-2.jpg" alt="Author image">
+          <ul class="cd-author-info">
+            <li>Александр Дивин</li>
+            <li>Дизайнер, DesignBy</li>
+          </ul>
+        </div>
+      </li>
+
+      <li>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti dignissimos, autem blanditiis maiores quibusdam qui placeat eius quae, eum quasi?</p>
+        <div class="cd-author">
+          <img src="img/avatar-3.jpg" alt="Author image">
+          <ul class="cd-author-info">
+            <li>Александр Дивин</li>
+            <li>CEO, CompanyLLC</li>
           </ul>
         </div>
       </li>
