@@ -339,6 +339,13 @@ h1 {
 #hidden-content-a h1 {
   color: #ECF0F1;
 }
+#hidden-content-с {
+  background: #1ABC9C;
+}
+#hidden-content-с h2,
+#hidden-content-с h4 {
+  color: white;
+}
 .fancybox-slide--current #hidden-content-b {
   transform: translateY(0);
 }
