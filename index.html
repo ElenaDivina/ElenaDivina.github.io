@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/bootstrap.css" >
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/camera.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" type="text/css" href="css/menu.css" />
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css">
@@ -32,7 +33,11 @@
     <script src="js/jquery.flexslider-min.js"></script>
     <script src="js/main.js"></script>
     
-    
+    <script src="js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+
     <script>	
         $(window).load( function(){	
             
@@ -54,6 +59,10 @@
               closeBtn   : true,
             });
 
+            $('#toggle-btn').click(function(){
+            $('#menu').toggle("fast");
+          });
+
       });
 
  
@@ -70,66 +79,72 @@
 
 <body>
 <!--===============================================header=================================================-->
+
   <div id="main">
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-              <a class="navbar-brand" href="index.html"><img alt="Логотип" src="img/logo2.png"></a>
+      <div class="container">
+          <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="col-md-2">
+              <div class="navbar-header">
+                  <a class="navbar-logo" href="index.html"><img alt="Логотип" src="img/logo2.png"></a>
+              </div>
             </div>
-              <div id="menu" class="nav-collapse ">
-                  <ul class="ca-menu navbar-right">
-                      <li class="main_li">
-                          <a href="#main" class="anchor-list_item" data-target="anchor">
-                              <span class="ca-icon"><img alt="Главная" src="img/butterfly_1.png"></span>
-                              <div class="ca-content">
-                                  <h2 class="ca-main">Главная</h2>
-                              </div>
-                          </a>
-                      </li>
-                      <li class="about_li">
-                          <a href="#info" class="anchor-list_item" data-target="anchor">
-                              <span class="ca-icon"><img alt="Обо мне" src="img/butterfly_4.png"></span>
-                              <div class="ca-content">
-                                  <h2 class="ca-main">Обо мне</h2>
-                              </div>
-                          </a>
-                      </li>
-                      <li class="port_li">
-                          <a href="#portfolio" class="anchor-list_item" data-target="anchor">
-                              <span class="ca-icon"><img alt="Бабочка" src="img/butterfly_3.png"></span>
-                              <div class="ca-content">
-                                  <h2 class="ca-main">Мои<br>Работы</h2>
-                              </div>
-                          </a>
-                      </li>
-                      <li class="price_li">
-                          <a href="#price" class="anchor-list_item" data-target="anchor">
-                              <span class="ca-icon"><img alt="Бабочка" src="img/butterfly_5.png"></span>
-                              <div class="ca-content">
-                                  <h2 class="ca-main">Цены</h2>
-                              </div>
-                          </a>
-                      </li>
-                      <li class="com_li">
-                          <a href="#comments" class="anchor-list_item" data-target="anchor">
-                              <span class="ca-icon"><img alt="Бабочка" src="img/butterfly_6.png"></span>
-                              <div class="ca-content">
-                                  <h2 class="ca-main">Отзывы</h2>
-            
-                              </div>
-                          </a>
-                      </li>
-                      <li class="cont_li">
-                          <a href="#contacts" class="anchor-list_item" data-target="anchor">
-                              <span class="ca-icon"><img alt="Бабочка" src="img/butterfly_2.png"></span>
-                              <div class="ca-content">
-                                  <h2 class="ca-main">Контакты</h2>
-            
-                              </div>
-                          </a>
-                      </li>
-                  </ul>
-              </div>   
+            <div class="col-md-10">
+            <button class="pull-right ddbtn" id="toggle-btn"><img src="img/logo_small.png"></button>
+            <div id="menu" class="nav-collapse">
+              <ul class="ca-menu navbar-right">
+                  <li class="main_li wow fadeInLeft" data-wow-delay="1.8s">
+                      <a href="#main" class="anchor-list_item" data-target="anchor">
+                          <span class="ca-icon"><img alt="Главная" src="img/butterfly_1.png"></span>
+                          <div class="ca-content">
+                              <h2 class="ca-main">Главная</h2>
+                          </div>
+                      </a>
+                  </li>
+                  <li class="about_li wow fadeInLeft" data-wow-delay="1.5s">
+                      <a href="#info" class="anchor-list_item" data-target="anchor">
+                          <span class="ca-icon"><img alt="Обо мне" src="img/butterfly_4.png"></span>
+                          <div class="ca-content">
+                              <h2 class="ca-main">Обо мне</h2>
+                          </div>
+                      </a>
+                  </li>
+                  <li class="port_li wow fadeInLeft" data-wow-delay="1.2s">
+                      <a href="#portfolio" class="anchor-list_item" data-target="anchor">
+                          <span class="ca-icon"><img alt="Бабочка" src="img/butterfly_3.png"></span>
+                          <div class="ca-content">
+                              <h2 class="ca-main">Мои<br>Работы</h2>
+                          </div>
+                      </a>
+                  </li>
+                  <li class="price_li wow fadeInLeft" data-wow-delay=".9s">
+                      <a href="#price" class="anchor-list_item" data-target="anchor">
+                          <span class="ca-icon"><img alt="Бабочка" src="img/butterfly_5.png"></span>
+                          <div class="ca-content">
+                              <h2 class="ca-main">Цены</h2>
+                          </div>
+                      </a>
+                  </li>
+                  <li class="com_li wow fadeInLeft" data-wow-delay=".6s">
+                      <a href="#comments" class="anchor-list_item" data-target="anchor">
+                          <span class="ca-icon"><img alt="Бабочка" src="img/butterfly_6.png"></span>
+                          <div class="ca-content">
+                              <h2 class="ca-main">Отзывы</h2>
+        
+                          </div>
+                      </a>
+                  </li>
+                  <li class="cont_li wow fadeInLeft" data-wow-delay=".3s">
+                      <a href="#contacts" class="anchor-list_item" data-target="anchor">
+                          <span class="ca-icon"><img alt="Бабочка" src="img/butterfly_2.png"></span>
+                          <div class="ca-content">
+                              <h2 class="ca-main">Контакты</h2>
+        
+                          </div>
+                      </a>
+                  </li>
+              </ul>
+              </div> 
+            </div>      
           </div>
     </div> 
   </div>      
@@ -159,21 +174,20 @@
 
     <div class="conteiner q">    
       <blockquote class="blockquote">
-        <h1>
-          <strong>У вас не будет второго шанса произвести первое впечатление</strong>
+        <h1 class="wow fadeInRight">
+          <strong>Красивые ногти — дополнение твоего образа</strong>
         </h1>
-        <footer class="blockquote-footer">Коко Шанель</footer>
       </blockquote>
     </div>
 
 <!-- ====================================БЛОК МОИ ПРЕДЛОЖЕНИЯ========================================= -->
 
    <div id="info">
-   <div class="col-xs-12"><h1><strong>Я предлагаю</strong></h1></div>
+   <div class="col-xs-12"><h1 class="wow fadeInLeft"><strong>Я предлагаю</strong></h1></div>
      <div class="container">
        <div class="row">
          <div class="col-md-4 col-xs-12">
-           <div class="info_img_1">
+           <div class="info_img_1 wow bounceInUp" data-wow-delay=".2s">
             <div class="tilt">
                <img src="img/img_info1.png" alt="" id="src">
              </div>
@@ -183,7 +197,7 @@
            </div>
          </div>
          <div class="col-md-4 col-xs-12">
-           <div class="info_img_2">
+           <div class="info_img_2 wow bounceInUp" data-wow-delay=".4s">
             <div class="tilt">
               <img src="img/img_info2.png" alt="" id="src">
              </div>
@@ -193,7 +207,7 @@
            </div>
          </div>
          <div class="col-md-4 col-xs-12">
-           <div class="info_img_3">
+           <div class="info_img_3 wow bounceInUp" data-wow-delay=".6s">
               <div class="tilt">
                 <img src="img/img_info3.png" alt="" id="src">
               </div>
@@ -210,14 +224,14 @@
 <!-- ====================================БЛОК ПОРТФОЛИО========================================= -->
 
 <div id="portfolio">
-<div class="col-xs-12"><h1><strong>Мои работы</strong></h1>
-<p>Девчёнки! Предлагаю вашему вниманию галерею моих работ.</p></div>
+<div class="col-xs-12"><h1 class="wow fadeInRight"><strong>Мои работы</strong></h1>
+<p class="wow fadeInLeft">Девчёнки! Предлагаю вашему вниманию галерею моих работ.</p></div>
 <div class="container"> 
   <ul class="nav nav-pills pics-ul">
-  <li class="active"><a id="all_btn" href="#all" data-toggle="tab">Всё</a></li>
-    <li><a id="man_btn" href="#manicure" data-toggle="tab">Маникюр</a></li>
-    <li><a id="ped_btn" href="#pedicure" data-toggle="tab">Педикюр</a></li>
-    <li><a id="art_btn" href="#art" data-toggle="tab">Дизайн</a></li>
+    <li class="active wow bounceInLeft"><a id="all_btn" href="#all" data-toggle="tab">Всё</a></li>
+    <li class="wow bounceInUp"  data-wow-delay=".1s"><a id="man_btn" href="#manicure" data-toggle="tab">Маникюр</a></li>
+    <li class="wow bounceInDown"  data-wow-delay=".2s"><a id="ped_btn" href="#pedicure" data-toggle="tab">Педикюр</a></li>
+    <li class="wow bounceInUp"  data-wow-delay=".3s"><a id="art_btn" href="#art" data-toggle="tab">Дизайн</a></li>
     
   </ul>
 <div class="clr"></div>
@@ -227,62 +241,76 @@
   <div class="tab-pane active" id="all">
   <ul class="thumbnails">
 
-    <li class="col-md-4 col-xs-6">
+    <li class="col-md-4 col-xs-6 wow fadeInLeft">
       <div class="thumbnail">
-        <div class="blockDtl all_opt">
+        <div class="blockDtl man_opt">
        <a data-fancybox="gallery" rel="group" href="img/portfolio/image1_b.jpg"><img src="img/portfolio/image1_b.jpg" alt=""></a>
         </div>
       </div>
     </li>
-    <li class="col-md-4 col-xs-6">
+    <li class="col-md-4 col-xs-6 wow fadeInUp">
       <div class="thumbnail">
         <div class="blockDtl all_opt">
-        <a data-fancybox="gallery" rel="group" href="img/portfolio/image2_b.jpg"><img src="img/portfolio/image2_b.jpg" alt=""></a>
+       <a data-fancybox="gallery" rel="group" href="img/portfolio/image2_b.jpg"><img src="img/portfolio/image2_b.jpg" alt=""></a>
         </div>
       </div>
     </li>
-    <li class="col-md-4 col-xs-6">
+     <li class="col-md-4 col-xs-6 wow fadeInRight">
       <div class="thumbnail">
         <div class="blockDtl all_opt">
-        <a data-fancybox="gallery" rel="group" href="img/portfolio/image3_b.jpg"><img src="img/portfolio/image3_b.jpg" alt=""></a>
+       <a data-fancybox="gallery" rel="group" href="img/portfolio/image3_b.jpg"><img src="img/portfolio/image3_b.jpg" alt=""></a>
         </div>
       </div>
-    </li>  
-    <li class="col-md-4 col-xs-6">
+    </li>
+    <li class="col-md-4 col-xs-6 wow fadeInLeft">
       <div class="thumbnail">
         <div class="blockDt all_opt">
-        <a data-fancybox="gallery" rel="group" href="img/portfolio/image4_b.jpg"><img src="img/portfolio/image4_b.jpg" alt=""></a>
+      <a data-fancybox="gallery" rel="group" href="img/portfolio/image4_b.jpg"><img src="img/portfolio/image4_b.jpg" alt=""></</a>
         </div>
       </div>
     </li>
-    <li class="col-md-4 col-xs-6">
+    <li class="col-md-4 col-xs-6 wow fadeInUp">
       <div class="thumbnail">
         <div class="blockDt all_opt">
         <a data-fancybox="gallery" rel="group" href="img/portfolio/image5_b.jpg"><img src="img/portfolio/image5_b.jpg" alt=""></a>
         </div>
       </div>
-    </li>   
-    <li class="col-md-4 col-xs-6">
+    </li>
+    <li class="col-md-4 col-xs-6 wow fadeInRight">
+      <div class="thumbnail">
+        <div class="blockDt all_opt">
+        <a data-fancybox="gallery" rel="group" href="img/portfolio/image6_b.jpg"><img src="img/portfolio/image6_b.jpg" alt=""></a>
+        </div>
+      </div>
+    </li>     
+    <li class="col-md-4 col-xs-6 wow fadeInLeft">
       <div class="thumbnail">
         <div class="blockDt all_opt">
         <a data-fancybox="gallery" rel="group" href="img/portfolio/image_p_1_b.jpg"><img src="img/portfolio/image_p_1_b.jpg" alt=""></a>
         </div>
       </div>
     </li> 
-     <li class="col-md-4 col-xs-6">
+     <li class="col-md-4 col-xs-6 wow fadeInUp">
       <div class="thumbnail">
-        <div class="blockDt all_opt">
+        <div class="blockDt ped_opt">
         <a data-fancybox="gallery" rel="group" href="img/portfolio/image_p_2_b.jpg"><img src="img/portfolio/image_p_2_b.jpg" alt=""></a>
         </div>
       </div>
     </li>   
-    <li class="col-md-4 col-xs-6">
+    <li class="col-md-4 col-xs-6 wow fadeInRight">
       <div class="thumbnail">
         <div class="blockDt all_opt">
         <a data-fancybox="gallery" rel="group" href="img/portfolio/image_p_3_b.jpg"><img src="img/portfolio/image_p_3_b.jpg" alt=""></a>
         </div>
       </div>
-    </li>     
+    </li>
+    <li class="col-md-4 col-xs-6 wow fadeInLeft">
+      <div class="thumbnail">
+        <div class="blockDt all_opt">
+        <a data-fancybox="gallery" rel="group" href="img/portfolio/image_p_4_b.jpg"><img src="img/portfolio/image_p_4_b.jpg" alt=""></a>
+        </div>
+      </div>
+    </li>      
    
   </ul>
       
@@ -290,42 +318,54 @@
   <!-- ====================================Маникюр========================================= -->
   <div class="tab-pane" id="manicure">
   <ul class="thumbnails">
-  
     <li class="col-md-4 col-xs-6">
       <div class="thumbnail">
         <div class="blockDtl man_opt">
-       <a data-fancybox="gallery" rel="group" href="img/portfolio/image1_b.jpg"><img src="img/portfolio/image1_b.jpg" alt=""></a>
+        <a data-fancybox="gallery" rel="group" href="img/portfolio/image1_b.jpg"><img src="img/portfolio/image1_b.jpg" alt=""></a>
         </div>
       </div>
     </li>
+
     <li class="col-md-4 col-xs-6">
       <div class="thumbnail">
         <div class="blockDtl man_opt">
-       <a data-fancybox="gallery" rel="group" href="img/portfolio/image2_b.jpg"><img src="img/portfolio/image2_b.jpg" alt=""></a>
+        <a data-fancybox="gallery" rel="group" href="img/portfolio/image2_b.jpg"><img src="img/portfolio/image2_b.jpg" alt=""></a>
         </div>
       </div>
     </li>
+
     <li class="col-md-4 col-xs-6">
       <div class="thumbnail">
         <div class="blockDtl man_opt">
-       <a data-fancybox="gallery" rel="group" href="img/portfolio/image3_b.jpg"><img src="img/portfolio/image3_b.jpg" alt=""></a>
+        <a data-fancybox="gallery" rel="group" href="img/portfolio/image3_b.jpg"><img src="img/portfolio/image3_b.jpg" alt=""></a>
         </div>
       </div>
-    </li>  
+    </li>
+
     <li class="col-md-4 col-xs-6">
       <div class="thumbnail">
-        <div class="blockDt man_opt">
+        <div class="blockDtl man_opt">
         <a data-fancybox="gallery" rel="group" href="img/portfolio/image4_b.jpg"><img src="img/portfolio/image4_b.jpg" alt=""></a>
         </div>
       </div>
     </li>
+
     <li class="col-md-4 col-xs-6">
       <div class="thumbnail">
-        <div class="blockDt man_opt">
+        <div class="blockDtl man_opt">
         <a data-fancybox="gallery" rel="group" href="img/portfolio/image5_b.jpg"><img src="img/portfolio/image5_b.jpg" alt=""></a>
         </div>
       </div>
     </li>
+
+    <li class="col-md-4 col-xs-6">
+      <div class="thumbnail">
+        <div class="blockDtl man_opt">
+        <a data-fancybox="gallery" rel="group" href="img/portfolio/image6_b.jpg"><img src="img/portfolio/image6_b.jpg" alt=""></a>
+        </div>
+      </div>
+    </li>
+
     <li class="col-md-4 col-xs-6">
       <div class="thumbnail">
         <div class="blockDtl man_opt">
@@ -333,13 +373,15 @@
         </div>
       </div>
     </li>
+
     <li class="col-md-4 col-xs-6">
       <div class="thumbnail">
-        <div class="blockDt man_opt">
+        <div class="blockDtl man_opt">
         <a data-fancybox="gallery" rel="group" href="img/portfolio/image9_b.jpg"><img src="img/portfolio/image9_b.jpg" alt=""></a>
         </div>
       </div>
     </li>
+
          
   </ul>
     
@@ -355,20 +397,30 @@
         </div>
       </div>
     </li>
+
      <li class="col-md-4 col-xs-6">
       <div class="thumbnail">
         <div class="blockDt ped_opt">
         <a data-fancybox="gallery" rel="group" href="img/portfolio/image_p_2_b.jpg"><img src="img/portfolio/image_p_2_b.jpg" alt=""></a>
         </div>
       </div>
-    </li>  
+    </li> 
+
     <li class="col-md-4 col-xs-6">
       <div class="thumbnail">
         <div class="blockDt ped_opt">
         <a data-fancybox="gallery" rel="group" href="img/portfolio/image_p_3_b.jpg"><img src="img/portfolio/image_p_3_b.jpg" alt=""></a>
         </div>
       </div>
-    </li>  
+    </li> 
+
+    <li class="col-md-4 col-xs-6">
+      <div class="thumbnail">
+        <div class="blockDt ped_opt">
+        <a data-fancybox="gallery" rel="group" href="img/portfolio/image_p_4_b.jpg"><img src="img/portfolio/image_p_4_b.jpg" alt=""></a>
+        </div>
+      </div>
+    </li> 
         
       
   </ul>
@@ -387,7 +439,7 @@
 
 </div>
 <!-- ===============================Кнопка "Показать все работы"=================================== -->
-<a id="show_all" href="javascript:;" class="btn btn-large btn-1">Посмотреть все работы</a>
+<a id="show_all" href="javascript:;" class="btn btn-large btn-1 wow bounceInLeft">Посмотреть все работы</a>
 
 <!-- ====================================Скрипт галереи========================================= -->
       <script>
@@ -410,9 +462,9 @@
           {
             src  : 'img/portfolio/image3_b.jpg',
             opts : {
-              caption : 'Работа 3 (Маникюр, 22.06.2017)'
+              caption : 'Работа 2 (Маникюр, 17.06.2017)'
             }
-          },  
+          },
           {
             src  : 'img/portfolio/image4_b.jpg',
             opts : {
@@ -423,6 +475,12 @@
             src  : 'img/portfolio/image5_b.jpg',
             opts : {
               caption : 'Работа 5 (Маникюр, 14.06.2017)'
+            }
+          },
+          {
+            src  : 'img/portfolio/image6_b.jpg',
+            opts : {
+              caption : 'Работа 5 (Маникюр, 27.06.2017)'
             }
           },
           {
@@ -454,6 +512,12 @@
             opts : {
               caption : 'Second caption'
             }
+          },
+          {
+            src  : 'img/portfolio/image_p_4_b.jpg',
+            opts : {
+              caption : 'Second caption'
+            }
           }
         ], {
           loop : true,
@@ -469,66 +533,66 @@
 <div id="price">
     <div class="container">
       <div class="row centered">
-        <h1><strong>Цены</strong></h1>
+        <h1 class="wow fadeInLeft"><strong>Цены</strong></h1>
         <br>
         <div class="col-lg-4">
               <div class="pricing-option">
                   <div class="pricing-top">
-                      <span class="pricing-edition">Уход<br>за руками</span>
-                      <span class="price">
+                      <span class="pricing-edition  wow bounceInDown">Уход<br>за руками</span>
+                      <span class="price wow bounceInLeft">
                           <sup>&#8372;</sup>
                           <span class="price-amount">70</span>
                       </span>
                   </div>
                   <ul>
-                      <li>Аппаратный маникюр</li>
-                      <li class="nail-color"><a data-fancybox data-src="#hidden-content-с" href="javascript:;" class="btn">Покрытие гель-лаком *</a></li>
-                      <li>Укрепление акриловой пудрой<strong> +20 грн</strong></li>
-                      <li>Снятие после другого мастера<strong> бесплатно</strong></li>
-                      <li class="bonus"><a data-fancybox data-src="#hidden-content-b" href="javascript:;" class="btn"><strong>1 неделя</strong> Бесплатная коррекция *</a></li>
+                      <li class="wow fadeInLeft">Аппаратный маникюр</li>
+                      <li class="nail-color wow fadeInLeft" data-wow-delay=".2s"><a data-fancybox data-src="#hidden-content-с" href="javascript:;" class="btn">Покрытие гель-лаком *</a></li>
+                      <li class="wow fadeInLeft" data-wow-delay=".4s">Укрепление акриловой пудрой<strong> +20 грн</strong></li>
+                      <li class="wow fadeInLeft" data-wow-delay=".6s">Снятие после другого мастера<strong> бесплатно</strong></li>
+                      <li class="bonus wow fadeInLeft" data-wow-delay=".8s"><a data-fancybox data-src="#hidden-content-b" href="javascript:;" class="btn"><strong>1 неделя</strong> Бесплатная коррекция *</a></li>
                   </ul>
-                  <a href="#contacts" class="pricing-signup" data-target="anchor">Связаться с мастером</a>
+                  <a href="#contacts" class="pricing-signup wow fadeInRight" data-wow-delay=".8s" data-target="anchor">Связаться с мастером</a>
               </div>
         </div>
         
         <div class="col-lg-4">
               <div class="pricing-option">
                   <div class="pricing-top">
-                      <span class="pricing-edition">Уход<br>за ногами</span>
-                      <span class="price">
+                      <span class="pricing-edition wow bounceInDown">Уход<br>за ногами</span>
+                      <span class="price wow bounceInLeft">
                           <sup>&#8372;</sup>
                           <span class="price-amount">90</span>
                       </span>
                   </div>
                   <ul>
-                      <li>Аппаратный педикюр</li>
-                      <li class="nail-color"><a data-fancybox data-src="#hidden-content-с" href="javascript:;" class="btn">Покрытие гель-лаком *</a></li>
-                      <li>Укрепление акриловой пудрой<strong> +10 грн</strong></li>
-                      <li>Чистка кожи ног<strong> +70 грн</strong></li>
-                      <li class="bonus"><a data-fancybox data-src="#hidden-content-b" href="javascript:;" class="btn"><strong>1 неделя</strong> Бесплатная коррекция *</a></li>
+                      <li class="wow fadeInLeft">Аппаратный педикюр</li>
+                      <li class="nail-color wow fadeInLeft" data-wow-delay=".2s"><a data-fancybox data-src="#hidden-content-с" href="javascript:;" class="btn">Покрытие гель-лаком *</a></li>
+                      <li class="wow fadeInLeft" data-wow-delay=".4s">Укрепление акриловой пудрой<strong> +10 грн</strong></li>
+                      <li class="wow fadeInLeft" data-wow-delay=".6s">Чистка кожи ног<strong> +70 грн</strong></li>
+                      <li class="bonus wow fadeInLeft" data-wow-delay=".8s"><a data-fancybox data-src="#hidden-content-b" href="javascript:;" class="btn"><strong>1 неделя</strong> Бесплатная коррекция *</a></li>
                   </ul>
-                  <a href="#contacts" class="pricing-signup" data-target="anchor">Связаться с мастером</a>
+                  <a href="#contacts" class="pricing-signup wow fadeInRight" data-wow-delay=".8s" data-target="anchor">Связаться с мастером</a>
               </div>
         </div>
         
         <div class="col-lg-4">
               <div class="pricing-option">
                   <div class="pricing-top">
-                      <span class="special-label">Акция!</span>
-                      <span class="pricing-edition">Полный комплекс</span>
-                      <span class="price">
+                      <span class="special-label wow fadeInRight">Акция!</span>
+                      <span class="pricing-edition wow bounceInDown">Полный комплекс</span>
+                      <span class="price wow bounceInLeft">
                           <sup>&#8372;</sup>
                           <span class="price-amount">160</span>
                       </span>
                   </div>
                   <ul>
-                      <li>Аппаратный маникюр</li>
-                      <li>Аппаратный педикюр</li>
-                      <li class="nail-color"><a data-fancybox data-src="#hidden-content-с" href="javascript:;" class="btn">Покрытие гель-лаком *</a></li>
-                      <li>Укрепление акриловой пудрой</li>
-                      <li class="bonus"><a data-fancybox data-src="#hidden-content-b" href="javascript:;" class="btn"><strong>1 неделя</strong> Бесплатная коррекция *</a></li>
+                      <li class="wow fadeInLeft">Аппаратный маникюр</li>
+                      <li class="wow fadeInLeft" data-wow-delay=".2s">Аппаратный педикюр</li>
+                      <li class="nail-color wow fadeInLeft" data-wow-delay=".4s"><a data-fancybox data-src="#hidden-content-с" href="javascript:;" class="btn">Покрытие гель-лаком *</a></li>
+                      <li class="wow fadeInLeft" data-wow-delay=".6s">Укрепление акриловой пудрой</li>
+                      <li class="bonus wow fadeInLeft" data-wow-delay=".8s"><a data-fancybox data-src="#hidden-content-b" href="javascript:;" class="btn"><strong>1 неделя</strong> Бесплатная коррекция *</a></li>
                   </ul>
-                  <a href="#contacts" class="pricing-signup" data-target="anchor">Связаться с мастером</a>
+                  <a href="#contacts" class="pricing-signup wow fadeInRight" data-wow-delay=".8s" data-target="anchor">Связаться с мастером</a>
               </div>
         </div>
       </div>
@@ -548,7 +612,7 @@
 <!-- =======================================БЛОК КОММЕНТАРИИ========================================== -->
 
 <div id="comments">
-  <h1><strong>Отзывы клиентов</strong></h1>
+  <h1 class="wow fadeInRight"><strong>Отзывы клиентов</strong></h1>
     <div class="cd-testimonials-wrapper cd-container">
     <br>
     <ul class="cd-testimonials">
@@ -569,18 +633,18 @@
 </div>
 
 <div id="contacts">
-  <h1><strong>Контакты</strong></h1>
-  <p>Привет! Меня зовут Елена! Если готова сделать маникюр у меня, обращайся! Сссылки на мои контакты ниже. </p>
+  <h1 class="wow fadeInLeft"><strong>Контакты</strong></h1>
+  <p class="wow fadeInRight">Привет! Меня зовут Елена! Если готова сделать маникюр у меня, обращайся! Сссылки на мои контакты ниже. </p>
   <div class="container">
     <div class="row centered">
-      <div class="my_photo">
+      <div class="my_photo wow pulse">
         <img src="img/avatar_my.jpg" alt="Author image">
       </div>
       <ul class="contacts_all nav-pills pics-ul"> 
-        <li><a data-fancybox data-src="#hidden-content-a" href="javascript:;" class="btn"><img class="phone" src="img/icons_media_phone.png" alt=""></a></li>
-        <li><a class="VK" href="https://vk.com/id96365593"><img class="img_vk" alt="VK" src="img/icons_media_VK.png"></a></li>
-        <li><a class="facebook" href="index.html"><img class="img_facebook" alt="Логотип" src="img/icons_media_facebook.png"></a></li>
-        <li><a class="instagram" href="index.html"><img class="img_instagram" alt="Логотип" src="img/icons_media_instagram.png"></a></li>
+        <li class="wow swing"><a data-fancybox data-src="#hidden-content-a" href="javascript:;" class="btn"><img class="phone" src="img/icons_media_phone.png" alt=""></a></li>
+        <li class="wow swing"><a class="VK" href="https://vk.com/id96365593"><img class="img_vk" alt="VK" src="img/icons_media_VK.png"></a></li>
+        <li class="wow swing"><a class="facebook" href="index.html"><img class="img_facebook" alt="Логотип" src="img/icons_media_facebook.png"></a></li>
+        <li class="wow swing"><a class="instagram" href="index.html"><img class="img_instagram" alt="Логотип" src="img/icons_media_instagram.png"></a></li>
       </ul>
   </div>
 </div>
@@ -596,7 +660,7 @@
 <div id="footer">
 <div class="container">
 <div class="row centered">
-  <h4><strong>Powered by</strong></h4><a class="VK_Divin" href="https://vk.com/id18644328"><h2>Divin Alexander</h2></a>
+  <h4 class="wow bounceInLeft"><strong>Powered by</strong></h4><a class="VK_Divin" href="https://vk.com/id18644328"><h2 class="wow bounceInRight">Divin Alexander</h2></a>
   <br>
 </div>
 </div>
