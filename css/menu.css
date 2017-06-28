@@ -13,32 +13,27 @@
     
 }
 .nav-collapse{
- 
-    //width:120%; 
-    //position:relative;
+    float: right;
 
 }
-.ca-menu{
-    //padding-bottom: -50px;
-   //float:left;
-    position:relative;
-    //left:25%;
-    margin-top: 10px;
-    margin-left: 280px;
-
+.ddbtn{
+    img{
+        width: 60%;
+    }
 }
+
 .ca-menu li{
     list-style:none;
-    width: 130px;
-    height: 70px;
-    border: 5px solid #f6f6f6;
+    width: 90px;
+    height: 50px;
+    border: 3px solid #f6f6f6;
     //right: 50%;
     overflow: hidden;
     position: relative;
     float:left;
     background: #fff;
-    margin-top: -50px;
-    margin-right: 10px;
+    //margin-top: -50px;
+    margin-right: 5px;
     -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
     -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
     box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
@@ -53,7 +48,7 @@
 
 }
 .ca-menu li:last-child{
-    margin-right: -80px;
+    margin-right: 50px;
 }
 .ca-menu li a{
     text-align: left;
@@ -128,8 +123,8 @@ li:hover{
 .ca-menu li:hover .ca-icon{
     width: 270%;
     opacity: .5;
-    left: -80px;
-    top: -25px;
+    left: -60px;
+    top: -15px;
     -webkit-transform: rotate(-20deg);
     -moz-transform: rotate(-20deg);
     -ms-transform: rotate(-20deg);
@@ -142,8 +137,8 @@ li:hover{
     -webkit-animation: moveFromBottom 400ms ease;
     -moz-animation: moveFromBottom 400ms ease;
     -ms-animation: moveFromBottom 400ms ease;
-    top: 3px;
-    font-size: 20px;
+    top: -2px;
+    font-size: 15px;
     text-transform: uppercase;
 }
 .ca-menu .main_li:hover .ca-main{
@@ -151,7 +146,7 @@ li:hover{
 }
 .ca-menu .port_li:hover .ca-main{
     color: #C0392B;
-    top: -8px;
+    top: -10px;
 }
 .ca-menu .price_li:hover .ca-main{
     color: #8E44AD;
@@ -222,5 +217,32 @@ li:hover{
 }
 
 @media only screen and (min-width: 1170px) {
- 
+.ca-menu li{
+    list-style:none;
+    width: 130px;
+    height: 70px;
+    border: 5px solid #f6f6f6;
+    margin-right: 10px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+
+}
+
+.ca-menu li:hover .ca-icon{
+    width: 270%;
+    opacity: .5;
+    left: -80px;
+    top: -25px;
+
+}
+
+.ca-menu li:hover .ca-main{
+    top: 3px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.ca-menu .port_li:hover .ca-main{
+    top: -8px;
+}
 }

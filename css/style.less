@@ -1,6 +1,7 @@
 /*============    ШРИФТЫ    ===========*/
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,300,700,900);
 /*============    ГЛАВНЫЙ ЭКРАН    ===========*/
+*{outline:0 !important;}
 a{
 	text-decoration: none !important;
 }
@@ -13,35 +14,30 @@ a{
 
 body{
 	background:#a5d2da;
-	padding-top: 100px;
 	padding-bottom: 0px;
 }
 .navbar{
 	background:#f8e9f2;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	//background: rgba(255,255,255,1);
-	//background: url(../img/background.jpg) center top;
+	padding-top: 15px;
+	padding-bottom: 10px;
 	border: none;
-
-	.container{
-		margin-left:120px;
-	}
 
 }
 
-.navbar-brand {
-	//float:left;
-	//position: relative;
-	//right:45%;
+.navbar-logo {
 	img{
-		position: relative;
-		width:35%;
+		display: none;
+		position: absolute;
+		width:100%;
 	}
 }
 
 .nav-collapse li{
 	font-family: "Myriad Pro";
+}
+
+#content{
+	margin-top: 85px;
 }
 
 h1,h2,h3,h4,p{	
@@ -373,10 +369,23 @@ h1{
   transition: all .33s;
 }
 
+#hidden-content-b {
+	background: #2980B9;
+	h1, h4{
+		color: #ECF0F1;
+	}
+}
+
  #hidden-content-a {
 	background: #C0392B;
 	h1{
 		color: #ECF0F1;
+	}
+}
+#hidden-content-с{
+	background: #1ABC9C;
+	h2, h4{
+		color: white;
 	}
 }
 
@@ -553,6 +562,7 @@ h1{
   height: 13px;
   background-color: #ffffff;
 }
+
 .flex-direction-nav li a::before {
   -webkit-transform: translateY(-35px) rotate(45deg) scale(1.2);
   -moz-transform: translateY(-35px) rotate(45deg) scale(1.2);
@@ -676,11 +686,12 @@ h1{
 display: inline-block;
 position: fixed;
 bottom: 8px;
-right: 30px;
+right: 10px;
 color: #E74C3C;
 text-decoration: none;
 font-size: 40px;
 line-height: 34px;
+z-index: 10;
 }
 .go-top:hover {
 color: #fff;
@@ -688,6 +699,17 @@ text-decoration: none;
 -moz-border-radius: 10px;
 -webkit-border-radius: 10px;
 border-radius: 10px;
+}
+
+.ddbtn{
+	//width:20%;
+	background:none;
+	border:none;
+	display:none;
+}
+.ddbtn img{
+	float:right;
+	width:50%;
 }
 
 /*============    ПОДВАЛ    ===========*/
@@ -714,6 +736,30 @@ border-radius: 10px;
 
 @media(min-width:993px) and (max-width:1200px) {
 	
+}
+@media only screen and  (min-width: 1000px){
+.navbar-logo {
+	img{
+		display: table !important;
+	}
+}
+#menu{
+	display: block !important;
+}
+}
+
+@media only screen and  (max-width: 1000px){
+
+.ddbtn{
+	display:table !important;
+}
+.collapse{
+	display:none;
+	float:none;
+}
+#menu{
+	display:none;
+}
 }
 
 @media only screen and (min-width: 768px) {
@@ -759,6 +805,9 @@ border-radius: 10px;
 }
 
 @media only screen and (min-width: 1170px) {
+  #content{
+	margin-top: 90px;
+  }
   .blockquote{
   	h1{
   		font-size: 30px;

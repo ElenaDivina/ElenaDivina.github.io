@@ -1,6 +1,9 @@
-@import url(//fonts.googleapis.com/css?family=Raleway:400,300,700,900);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,700,900);
 /*============    ШРИФТЫ    ===========*/
 /*============    ГЛАВНЫЙ ЭКРАН    ===========*/
+* {
+  outline: 0 !important;
+}
 a {
   text-decoration: none !important;
 }
@@ -13,24 +16,24 @@ a {
 }
 body {
   background: #a5d2da;
-  padding-top: 100px;
   padding-bottom: 0px;
 }
 .navbar {
   background: #f8e9f2;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 15px;
+  padding-bottom: 10px;
   border: none;
 }
-.navbar .container {
-  margin-left: 120px;
-}
-.navbar-brand img {
-  position: relative;
-  width: 35%;
+.navbar-logo img {
+  display: none;
+  position: absolute;
+  width: 100%;
 }
 .nav-collapse li {
   font-family: "Myriad Pro";
+}
+#content {
+  margin-top: 85px;
 }
 h1,
 h2,
@@ -333,6 +336,13 @@ h1 {
   transform: translateY(-50px);
   transition: all .33s;
 }
+#hidden-content-b {
+  background: #2980B9;
+}
+#hidden-content-b h1,
+#hidden-content-b h4 {
+  color: #ECF0F1;
+}
 #hidden-content-a {
   background: #C0392B;
 }
@@ -613,11 +623,12 @@ h1 {
   display: inline-block;
   position: fixed;
   bottom: 8px;
-  right: 30px;
+  right: 10px;
   color: #E74C3C;
   text-decoration: none;
   font-size: 40px;
   line-height: 34px;
+  z-index: 10;
 }
 .go-top:hover {
   color: #fff;
@@ -626,9 +637,38 @@ h1 {
   -webkit-border-radius: 10px;
   border-radius: 10px;
 }
+.ddbtn {
+  background: none;
+  border: none;
+  display: none;
+}
+.ddbtn img {
+  float: right;
+  width: 50%;
+}
 /*============    ПОДВАЛ    ===========*/
 /*============    	ВСПЛЫВАЮЩИЕ ОКНА    ===========*/
 /*============    	АДАПТИВ    ===========*/
+@media only screen and (min-width: 1000px) {
+  .navbar-logo img {
+    display: table !important;
+  }
+  #menu {
+    display: block !important;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .ddbtn {
+    display: table !important;
+  }
+  .collapse {
+    display: none;
+    float: none;
+  }
+  #menu {
+    display: none;
+  }
+}
 @media only screen and (min-width: 768px) {
   .blockquote h1 {
     font-size: 24px;
@@ -665,6 +705,9 @@ h1 {
   }
 }
 @media only screen and (min-width: 1170px) {
+  #content {
+    margin-top: 90px;
+  }
   .blockquote h1 {
     font-size: 30px;
   }
